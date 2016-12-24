@@ -19,6 +19,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright, Arnaud Dartois 2016</copyright>
-    <tags>NMA Notification Notify My Android Library</tags>
+    <tags>NMA Notification NotifyMyAndroid Library Android</tags>
   </metadata>
 </package>
