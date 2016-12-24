@@ -1,5 +1,6 @@
 # SimpleNMA
 Simple Nuget to send notification to NotifyMyAndroid.
+-----------------------------------------------------
 
 ## Requirements:
     .Net Framework 4.0
@@ -16,23 +17,25 @@ Install-Package SimpleNMA
 
 ## Sample:
 
-###Check your APIKey :
-  try
+###Check your APIKey
+```csharp
+try
+{
+  NMAManager.Instance.ApiKey = ""; // Set Invalid API
+  var bResult = NMAManager.Instance.CheckApiKey();
+  if (bResult)
   {
-      NMAManager.Instance.ApiKey = ""; // Set Invalid API
-      var bResult = NMAManager.Instance.CheckApiKey();
-      if (bResult)
-      {
-          Console.WriteLine("API OK");
-      }
+      Console.WriteLine("API OK");
   }
-  catch (Exception ex)
-  {
-      Console.WriteLine(ex.Message);
-  }
+}
+catch (Exception ex)
+{
+  Console.WriteLine(ex.Message);
+}
+```
 
-###Send a notification:
-
+###Send a notification
+```csharp
 try
 {
     NMAManager.Instance.ApiKey = ""; // Set Valid API
@@ -48,3 +51,4 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
+```
