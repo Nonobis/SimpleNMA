@@ -16,7 +16,7 @@ Install-Package SimpleNMA
 
 ## Sample:
 
-### Check your APIKey :
+###Check your APIKey :
   try
   {
       NMAManager.Instance.ApiKey = ""; // Set Invalid API
@@ -31,7 +31,7 @@ Install-Package SimpleNMA
       Console.WriteLine(ex.Message);
   }
 
-### Send a notification:
+###Send a notification:
 
 try
 {
