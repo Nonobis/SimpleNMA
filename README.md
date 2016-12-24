@@ -1,22 +1,22 @@
 # SimpleNMA
 Simple Nuget to send notification to NotifyMyAndroid.
 
-Requirements:
+## Requirements:
     .Net Framework 4.0
     Account on http://www.notifymyandroid.com
 
-Features:
+## Features:
 - Check API Key is valid
 - Send Notification
     
-Installation:
+## Installation:
 The easiest way to get started is:
 
 Install-Package SimpleNMA
 
-Sample:
+## Sample:
 
-Check your APIKey :
+### Check your APIKey :
   try
   {
       NMAManager.Instance.ApiKey = ""; // Set Invalid API
@@ -31,7 +31,7 @@ Check your APIKey :
       Console.WriteLine(ex.Message);
   }
 
-Send a notification:
+### Send a notification:
 
 try
 {
