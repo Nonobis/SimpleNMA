@@ -135,4 +135,7 @@
   <data name="NotificationNotSpecified" xml:space="preserve">
     <value>Notification not specified.</value>
   </data>
+  <data name="UrlTooLong" xml:space="preserve">
+    <value>Provided notification url exceeds the maximum allowed length [{0}].</value>
+  </data>
 </root>

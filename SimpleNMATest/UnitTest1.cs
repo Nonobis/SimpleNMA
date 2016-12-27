@@ -71,5 +71,50 @@ namespace SimpleNMATest
                 Assert.Fail(ex.Message);
             }
         }
+
+        [TestMethod]
+        public void SendTestNotificationWithUrl()
+        {
+            try
+            {
+                NMAManager.Instance.ApiKey = _ValidAPIKey; // Set Valid API
+                NMAManager.Instance.ApplicationName = "SimpleNMA"; // Set ApplicationName
+                var oNotif = new NMANotification("Test", "Test Notification", "http://www.google.fr", PriorityNotification.Normal);
+                var bResult = NMAManager.Instance.Send(oNotif);
+                Assert.IsTrue(bResult, "Notification Send with Success");
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
+
+        [TestMethod]
+        public void SendTestNotificationWithHtml()
+        {
+            try
+            {
+                NMAManager.Instance.ApiKey = _ValidAPIKey; // Set Valid API
+                NMAManager.Instance.ApplicationName = "SimpleNMA"; // Set ApplicationName
+                NMAManager.Instance.AllowHtml = true;
+
+                /* Html Tags Supported
+                  * 
+                  * <a href="...">, <b>, <big>, <blockquote>, <br>, <cite>
+                  * <dfn>, <div align="...">, <em>, <font size="..." color="..." face="...">
+                  * <h1>, <h2>, <h3>, <h4>, <h5>, <h6>
+                  *  <i>, <p>, <small>, <strike>, <strong>
+                  * <sub>, <sup>, <tt>, <u>
+                */
+                var sHtml = "<cite>Test Notification</cite>";
+                var oNotif = new NMANotification("Test", sHtml, "http://www.google.fr", PriorityNotification.Normal);
+                var bResult = NMAManager.Instance.Send(oNotif);
+                Assert.IsTrue(bResult, "Notification Send with Success");
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
     }
 }

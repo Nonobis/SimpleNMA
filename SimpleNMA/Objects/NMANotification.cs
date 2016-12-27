@@ -36,6 +36,14 @@ namespace SimpleNMA
         public PriorityNotification Priority { get; set; }
 
         /// <summary>
+        /// Gets or sets the URL.
+        /// </summary>
+        /// <value>
+        /// The URL.
+        /// </value>
+        public string Url { get; set; }
+
+        /// <summary>
         /// Returns true if ... is valid.
         /// </summary>
         /// <value>
@@ -59,6 +67,9 @@ namespace SimpleNMA
                 if (Event.Length > EVENT_MAX_LENGTH)
                     throw new SimpleNMAException(string.Format(Resources.EventTooLong, EVENT_MAX_LENGTH));
 
+                if (!String.IsNullOrEmpty(Url) && (Url.Length > URL_MAX_LENGTH))
+                    throw new SimpleNMAException(string.Format(Resources.UrlTooLong, URL_MAX_LENGTH));
+
                 return true;
             }
         }
@@ -76,6 +87,11 @@ namespace SimpleNMA
         /// </summary>
         private const int EVENT_MAX_LENGTH = 1000;
 
+        /// <summary>
+        /// The URL maximum length
+        /// </summary>
+        private const int URL_MAX_LENGTH = 1000;
+
         #endregion
 
         #region Constructors
@@ -86,6 +102,21 @@ namespace SimpleNMA
         public NMANotification()
         {
 
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NMANotification"/> class.
+        /// </summary>
+        /// <param name="pEvent">The p event.</param>
+        /// <param name="pDescription">The p description.</param>
+        /// <param name="pUrl">The p URL.</param>
+        /// <param name="pPriority">The p priority.</param>
+        public NMANotification(string pEvent, string pDescription, string pUrl, PriorityNotification pPriority)
+        {
+            Event = pEvent;
+            Description = pDescription;
+            Url = pUrl;
+            Priority = pPriority;
         }
 
         /// <summary>

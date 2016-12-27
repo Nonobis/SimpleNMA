@@ -113,5 +113,14 @@ namespace SimpleNMA.Properties {
                 return ResourceManager.GetString("NotificationNotSpecified", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Provided notification url exceeds the maximum allowed length [{0}]..
+        /// </summary>
+        internal static string UrlTooLong {
+            get {
+                return ResourceManager.GetString("UrlTooLong", resourceCulture);
+            }
+        }
     }
 }

@@ -68,6 +68,16 @@ namespace SimpleNMA
         private const string VERIFIY_KEY_BASE_METHOD = "verify?apikey={0}";
 
         /// <summary>
+        /// The post notification URL parameter
+        /// </summary>
+        private const string POST_NOTIFICATION_URL_PARAMETER = "&url={0}";
+
+        /// <summary>
+        /// The post notification content type parameter
+        /// </summary>
+        private const string POST_NOTIFICATION_CONTENT_TYPE_PARAMETER = "&content-type={0}";
+
+        /// <summary>
         /// The post notification provider parameter
         /// </summary>
         private const string POST_NOTIFICATION_PROVIDER_PARAMETER = "&developerkey={0}";
@@ -120,6 +130,14 @@ namespace SimpleNMA
         /// </value>
         public string DevelopperKey { get; set; }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether [allow HTML].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [allow HTML]; otherwise, <c>false</c>.
+        /// </value>
+        public bool AllowHtml { get; set; }
+
         #endregion
 
         #region Private Methods
@@ -141,10 +159,21 @@ namespace SimpleNMA
                 HttpUtility.UrlEncode(pNotification.Event),
                 ((sbyte)(pNotification.Priority)));
 
+            if (!string.IsNullOrEmpty(pNotification.Url))
+                nmaUrlSb.AppendFormat(
+                    POST_NOTIFICATION_URL_PARAMETER,
+                    HttpUtility.UrlEncode(pNotification.Url));
+
             if (!string.IsNullOrEmpty(DevelopperKey))
                 nmaUrlSb.AppendFormat(
                     POST_NOTIFICATION_PROVIDER_PARAMETER,
                     HttpUtility.UrlEncode(DevelopperKey));
+
+            if (AllowHtml)
+                nmaUrlSb.AppendFormat(
+                    POST_NOTIFICATION_CONTENT_TYPE_PARAMETER,
+                    HttpUtility.UrlEncode("text/html"));
+
             return nmaUrlSb.ToString();
         }
 
