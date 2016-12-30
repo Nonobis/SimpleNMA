@@ -8,16 +8,15 @@
 	-->
 
   <metadata>
-    <!-- This will use the AssemblyName -->
-    <id>$id$</id>
-    <!-- This will use the AssemblyVersion -->
-    <version>$version$</version>
+    <id>SimpleNMA</id>
+    <version>0.0.0.3</version>
     <title>SimpleNMA</title>
     <description>Simple Nuget to send notification to NotifyMyAndroid.</description>
     <authors>Arnaud Dartois</authors>
     <owners>Arnaud Dartois</owners>
+    <projectUrl>http://github.com/Nonobis/SimpleNMA</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Attempt at automating nuget generation/publication with TeamCity.</releaseNotes>
+		<releaseNotes>Modifying SimpleNMA.nuspec for TeamCity</releaseNotes>
     <copyright>Copyright, Arnaud Dartois 2016</copyright>
     <tags>NMA Notification NotifyMyAndroid Library Android</tags>
     <dependencies>

@@ -35,6 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleExtension, Version=0.0.0.18, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleExtension.0.0.0.18\lib\net452\SimpleExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleNMA, Version=0.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleNMA.0.0.0.2\lib\net452\SimpleNMA.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -54,10 +62,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleNMA\SimpleNMA.csproj">
-      <Project>{edeacba9-801b-4466-afae-f5db8c41b907}</Project>
-      <Name>SimpleNMA</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
