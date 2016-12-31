@@ -9,7 +9,7 @@
 
   <metadata>
     <id>SimpleNMA</id>
-    <version>0.0.0.3</version>
+    <version>0.0.0.4</version>
     <title>SimpleNMA</title>
     <description>Simple Nuget to send notification to NotifyMyAndroid.</description>
     <authors>Arnaud Dartois</authors>
@@ -20,7 +20,21 @@
     <copyright>Copyright, Arnaud Dartois 2016</copyright>
     <tags>NMA Notification NotifyMyAndroid Library Android</tags>
     <dependencies>
-      <dependency id="SimpleExtension" version="0.0.0.18" />
+      <dependency id="SimpleExtension" version="0.0.0.20" />
     </dependencies>
+  <files>
+    <file src="bin\Release\net35\SimpleNMA.dll" target="lib\net35\SimpleNMA.dll" />
+    <file src="bin\Release\net35\SimpleNMA.pdb" target="lib\net35\SimpleNMA.pdb" />
+    <file src="bin\Release\net40\SimpleNMA.dll" target="lib\net40\SimpleNMA.dll" />
+    <file src="bin\Release\net40\SimpleNMA.pdb" target="lib\net40\SimpleNMA.pdb" />
+    <file src="bin\Release\net45\SimpleNMA.dll" target="lib\net45\SimpleNMA.dll" />
+    <file src="bin\Release\net45\SimpleNMA.pdb" target="lib\net45\SimpleNMA.pdb" />
+    <file src="bin\Release\net451\SimpleNMA.dll" target="lib\net451\SimpleNMA.dll" />
+    <file src="bin\Release\net451\SimpleNMA.pdb" target="lib\net451\SimpleNMA.pdb" />
+    <file src="bin\Release\net452\SimpleNMA.dll" target="lib\net452\SimpleNMA.dll" />
+    <file src="bin\Release\net452\SimpleNMA.pdb" target="lib\net452\SimpleNMA.pdb" />
+    <file src="bin\Release\net461\SimpleNMA.dll" target="lib\net461\SimpleNMA.dll" />
+    <file src="bin\Release\net461\SimpleNMA.pdb" target="lib\net461\SimpleNMA.pdb" />
+  </files>
   </metadata>
 </package>
