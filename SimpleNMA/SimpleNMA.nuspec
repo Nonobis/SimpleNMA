@@ -22,6 +22,7 @@
     <dependencies>
       <dependency id="SimpleExtension" version="0.0.0.20" />
     </dependencies>
+  </metadata>
   <files>
     <file src="bin\Release\net35\SimpleNMA.dll" target="lib\net35\SimpleNMA.dll" />
     <file src="bin\Release\net35\SimpleNMA.pdb" target="lib\net35\SimpleNMA.pdb" />
@@ -36,5 +37,4 @@
     <file src="bin\Release\net461\SimpleNMA.dll" target="lib\net461\SimpleNMA.dll" />
     <file src="bin\Release\net461\SimpleNMA.pdb" target="lib\net461\SimpleNMA.pdb" />
   </files>
-  </metadata>
 </package>
